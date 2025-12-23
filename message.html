@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Message</title>
+
+  <style>
+    body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 214, 232, 0.55),
+      rgba(255, 241, 193, 0.55)
+    ),
+    url("assets/bubu\ bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.emoji {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.25;
+  animation: float 7s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.emoji.one { top: 15%; left: 10%; }
+.emoji.two { top: 70%; right: 12%; animation-delay: 2s; }
+.emoji.three { top: 40%; right: 5%; animation-delay: 4s; }
+.emoji.four { bottom: 12%; left: 25%; animation-delay: 6s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+
+
+    .card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      border-radius: 26px;
+      padding: 50px 40px;
+      max-width: 1000px;
+      width: 90%;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 26px;
+      background: linear-gradient(135deg, #ff9acb, #ffd86f);
+      opacity: 0.15;
+      pointer-events: none;
+    }
+
+    h1 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 2.4rem;
+      color: #ff5fa2;
+      text-align: center;
+    }
+
+   p {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: #663399; /* a soft purple/lilac */
+  text-align: center;
+  margin: 0;
+  white-space: pre-wrap; /* allows multi-line messages */
+  
+  /* Sweet styling */
+  background: rgba(255, 240, 245, 0.3); /* soft transparent pink background */
+  padding: 16px 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(255, 182, 193, 0.3); /* soft pink shadow */
+  font-family: 'Comic Sans MS', 'Segoe UI', sans-serif; /* playful font */
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5); /* soft glow */
+  backdrop-filter: blur(2px); /* soft glass effect */
+}
+
+    .hint {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    .back {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      padding: 10px 22px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, #7afcff, #4facfe);
+      color: #003b4f;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+    }
+
+    .back:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+<div class="emoji one">💖</div>
+<div class="emoji two">✨</div>
+<div class="emoji three">🍬</div>
+<div class="emoji four">🌸</div>
+
+<button class="back" onclick="window.history.back()">Back</button>
+
+
+  <div class="card">
+    
+    <h1>Dear Bubu</h1>
+
+    <!-- EDIT YOUR MESSAGE HERE -->
+    <p>
+This is where you can put your message.
+
+You can change this text anytime.
+Write something sweet, meaningful, or important.
+    </p>
+
+  </div>
+
+</body>
+</html>
